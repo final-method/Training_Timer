@@ -125,7 +125,7 @@ class TrainingTimer:
             df_new = pd.DataFrame(data)
 
             # Save to Excel
-            filename = "TrainingTracker1.xlsx"
+            filename = "TrainingTracker.xlsx"
             
             try:
                 if os.path.exists(filename):
