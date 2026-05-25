@@ -119,14 +119,13 @@ class TrainingTimer:
                 "Start Time": [self.start_time.strftime("%H:%M:%S") if self.total_elapsed == 0 else "Multiple"],
                 "End Time": [end_time.strftime("%H:%M:%S")],
                 "Duration (minutes)": [round(final_duration / 60, 2)],
-                "Duration (seconds)": [final_duration],
                 "Notes": [notes]
             }
 
             df_new = pd.DataFrame(data)
 
             # Save to Excel
-            filename = "TrainingTracker.xlsx"
+            filename = "TrainingTracker1.xlsx"
             
             try:
                 if os.path.exists(filename):
