@@ -113,11 +113,15 @@ class TrainingTimer:
             # Get notes
             notes = self.notes_text.get("1.0", tk.END).strip()
 
+            #premath to get hours
+            hours_duration = final_duration / 60
+
             # Prepare data
             data = {
                 "Date": [datetime.now().strftime("%Y-%m-%d")],
                 "Start Time": [self.start_time.strftime("%H:%M:%S") if self.total_elapsed == 0 else "Multiple"],
                 "End Time": [end_time.strftime("%H:%M:%S")],
+                "Duration (hours)": [round(hours_duration / 60, 2)],
                 "Duration (minutes)": [round(final_duration / 60, 2)],
                 "Notes": [notes]
             }
